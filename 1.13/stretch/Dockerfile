@@ -14,7 +14,7 @@ ENV GOLANG_VERSION 1.13.3
 RUN set -eux; \
 	\
 # this "case" statement is generated via "update.sh"
-	dpkgArch="$(dpkg --print-architecture)"; \
+	dpkgArch="arm64"; \
 	case "${dpkgArch##*-}" in \
 		amd64) goRelArch='linux-amd64'; goRelSha256='0804bf02020dceaa8a7d7275ee79f7a142f1996bfd0c39216ccb405f93f994c0' ;; \
 		armhf) goRelArch='linux-armv6l'; goRelSha256='9f15d6aa4098cd53ec5cb48d1a1e554d062b2263a03985d50c2568757d966dc6' ;; \
